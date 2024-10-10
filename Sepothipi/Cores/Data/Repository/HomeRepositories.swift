@@ -10,25 +10,34 @@ import RxSwift
 import RxCocoa
 
 protocol HomeRepositoriesProtocol {
-    func requestMusicList() -> Observable<MusicList>
+    func requestMusicList(keyword: String) -> Observable<MusicList>
+    
+    func requestPlayableMusicList() -> Observable<MusicList>
 }
 
 class HomeRepositories: NSObject {
         
-    let service: MusicListProtocol
+    let musicListServie: MusicListProtocol
+    let musicPlayableService: PlayableMusicProtocol
     
     static let sharedInstance = {
-        let service = MusicService.sharedInstance
-        return HomeRepositories(service: service)
+        let musicListServie = MusicService.sharedInstance
+        let musicPlayableService = PlayableMusicService.sharedInstance
+        return HomeRepositories(musicListService: musicListServie, musicPlayableService: musicPlayableService)
     }()
     
-    init(service: MusicListProtocol) {
-        self.service = service
+    init(musicListService: MusicListProtocol, musicPlayableService: PlayableMusicProtocol) {
+        self.musicListServie = musicListService
+        self.musicPlayableService = musicPlayableService
     }
 }
 
 extension HomeRepositories: HomeRepositoriesProtocol {
-    func requestMusicList() -> RxSwift.Observable<MusicList> {
-        return service.requestMusicList()
+    func requestPlayableMusicList() -> RxSwift.Observable<MusicList> {
+        return musicPlayableService.requestPlayableMusicList()
+    }
+    
+    func requestMusicList(keyword: String) -> RxSwift.Observable<MusicList> {
+        return musicListServie.requestMusicList(keyword: keyword)
     }
 }

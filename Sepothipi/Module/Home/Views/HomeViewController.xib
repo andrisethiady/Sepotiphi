@@ -28,7 +28,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" text="Search here..." translatesAutoresizingMaskIntoConstraints="NO" id="6X6-qg-4a8">
+                <searchBar contentMode="redraw" placeholder="Search here..." translatesAutoresizingMaskIntoConstraints="NO" id="6X6-qg-4a8">
                     <rect key="frame" x="0.0" y="59" width="393" height="67"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="67" id="5YH-Rb-9c5"/>
@@ -124,23 +124,23 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xu-zN-WtP">
-                            <rect key="frame" x="8" y="21.333333333333339" width="88.333333333333329" height="32.666666666666657"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="All Song">
-                                <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
-                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </buttonConfiguration>
+                            <rect key="frame" x="8" y="23" width="65" height="31"/>
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="All Song">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <connections>
                                 <action selector="onPressAllSong:" destination="-1" eventType="touchUpInside" id="cdG-ah-RSp"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igu-G7-AcY">
-                            <rect key="frame" x="104.33333333333331" y="21.333333333333339" width="134" height="32.666666666666657"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Playable Song">
-                                <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
-                                <color key="baseForegroundColor" name="GrayDisable"/>
-                            </buttonConfiguration>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igu-G7-AcY">
+                            <rect key="frame" x="89" y="23" width="110" height="31"/>
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Playable Song">
+                                <color key="titleColor" name="GrayDisable"/>
+                            </state>
                             <connections>
                                 <action selector="onPressPlayableSong:" destination="-1" eventType="touchUpInside" id="ddV-QK-wEz"/>
                             </connections>
@@ -152,12 +152,12 @@
                         <constraint firstItem="45v-o0-GHg" firstAttribute="centerX" secondItem="4RY-Sn-T76" secondAttribute="centerX" id="M06-qG-Z5a"/>
                         <constraint firstAttribute="bottom" secondItem="igu-G7-AcY" secondAttribute="bottom" constant="8" id="Mc6-jj-VOi"/>
                         <constraint firstItem="0xu-zN-WtP" firstAttribute="leading" secondItem="4RY-Sn-T76" secondAttribute="leading" constant="8" id="NFm-0B-zZL"/>
-                        <constraint firstItem="igu-G7-AcY" firstAttribute="leading" secondItem="0xu-zN-WtP" secondAttribute="trailing" constant="8" id="mhx-VB-inz"/>
+                        <constraint firstItem="igu-G7-AcY" firstAttribute="leading" secondItem="0xu-zN-WtP" secondAttribute="trailing" constant="16" id="mhx-VB-inz"/>
                         <constraint firstAttribute="bottom" secondItem="0xu-zN-WtP" secondAttribute="bottom" constant="8" id="mi0-Mb-MW0"/>
                         <constraint firstItem="45v-o0-GHg" firstAttribute="top" secondItem="4RY-Sn-T76" secondAttribute="top" constant="10" id="sbE-Ja-uj2"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AL6-hL-hte">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AL6-hL-hte">
                     <rect key="frame" x="8" y="200" width="377" height="507"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>

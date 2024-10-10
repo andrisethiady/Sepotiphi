@@ -18,4 +18,5 @@ struct Music: Decodable {
     var artworkUrl100: String?
     var collectionName: String?
     var path: String?
+    var imageLocalPath: String?
 }

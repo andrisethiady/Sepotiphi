@@ -14,6 +14,9 @@ class HomeViewController: UIViewController {
     
     var player: AVAudioPlayer!
     var timer: Timer? = nil
+    
+    var musicList: [Music]?
+    var lastMusicList: [Music]?
 
     @IBOutlet weak var tableViewHeader: UIView!
     
@@ -23,13 +26,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var btnAllSong: UIButton!
     @IBOutlet weak var btnPlayableSong: UIButton!
     
+    
     @IBOutlet weak var homeTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-        setMusic(path: PlayableSongEnum.enchanted)
+        setupBinding()
+        
+        homeViewModel.getMusicList(keyword: "Bruno Mars")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -38,10 +44,20 @@ class HomeViewController: UIViewController {
     
     func setupUI() {
         tableViewHeader.roundCorners(corners: [.topLeft, .topRight], radius: 16)
+        
+        homeTableView.showsVerticalScrollIndicator = false
+        homeTableView.delegate = self
+        homeTableView.dataSource = self
+        homeTableView.register(UINib(nibName: HomeCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: HomeCell.cellIdentifier)
+        
+        searchBar.delegate = self
     }
     
     func setupBinding() {
-        
+        homeViewModel.musicList.subscribe(onNext: { [unowned self] musicList in
+            self.musicList = musicList.results
+            homeTableView.reloadData()
+        }).disposed(by: homeViewModel.bag)
     }
     
     func setMusic(path: String?) {
@@ -77,6 +93,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onPressBtnPlay(_ sender: Any) {
+        guard let player = player else { return }
+        
         if player.isPlaying == true {
             player.stop()
         } else {
@@ -86,11 +104,23 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onPressAllSong(_ sender: Any) {
+        if player != nil { player.stop() }
         
+        if lastMusicList != nil {
+            musicList = lastMusicList
+            homeTableView.reloadData()
+        }
+        
+        btnAllSong.setTitleColor(.black, for: .normal)
+        btnPlayableSong.setTitleColor(.grayDisable, for: .normal)
     }
     
     @IBAction func onPressPlayableSong(_ sender: Any) {
+        btnPlayableSong.setTitleColor(.black, for: .normal)
+        btnAllSong.setTitleColor(.grayDisable, for: .normal)
         
+        lastMusicList = musicList
+        homeViewModel.getPlayableMusicList()
     }
     
     @IBAction func onProgressBarValueChange(_ sender: Any) {
@@ -99,6 +129,55 @@ class HomeViewController: UIViewController {
         player.prepareToPlay()
         player.play()
     }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        musicList?.count ?? 0
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = homeTableView.dequeueReusableCell(withIdentifier: HomeCell.cellIdentifier, for: indexPath) as! HomeCell
+        let data = musicList?[indexPath.row] ?? Music()
+        
+        cell.update(with: data)
+        
+        return cell
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = musicList?[indexPath.row] ?? Music()
+        
+        if data.path != nil {
+            setMusic(path: data.path)
+            
+            player.stop()
+            progressBar.maximumValue = Float(player.duration)
+            player.prepareToPlay()
+            player.play()
+        } else {
+            homeTableView.deselectRow(at: indexPath, animated: false)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 76
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 76
+    }
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        guard let keyword = searchBar.text, !keyword.isEmpty, keyword != "" else { return }
+        
+        homeViewModel.getMusicList(keyword: keyword)
+        searchBar.text = ""
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }

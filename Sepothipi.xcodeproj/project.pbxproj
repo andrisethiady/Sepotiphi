@@ -35,6 +35,8 @@
 		982267002CB7C81B00285B45 /* HomeIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982266FF2CB7C81B00285B45 /* HomeIteractor.swift */; };
 		982267032CB7CA1500285B45 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267022CB7CA1500285B45 /* MainBuilder.swift */; };
 		982267052CB7CA3D00285B45 /* ModuleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267042CB7CA3D00285B45 /* ModuleEnum.swift */; };
+		982267082CB8098700285B45 /* PlayableSongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267072CB8098700285B45 /* PlayableSongService.swift */; };
+		9822670A2CB8120800285B45 /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267092CB8120800285B45 /* ErrorEnum.swift */; };
 		CCCB0309AE3979041AF5D3BC /* Pods_Sepothipi_SepothipiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF10A0BD9C778E1DF29FE8 /* Pods_Sepothipi_SepothipiUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		982266FF2CB7C81B00285B45 /* HomeIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIteractor.swift; sourceTree = "<group>"; };
 		982267022CB7CA1500285B45 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		982267042CB7CA3D00285B45 /* ModuleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleEnum.swift; sourceTree = "<group>"; };
+		982267072CB8098700285B45 /* PlayableSongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableSongService.swift; sourceTree = "<group>"; };
+		982267092CB8120800285B45 /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
 		986BFC74BFBED497E99F9BB4 /* Pods_Sepothipi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sepothipi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6D4400F72A715627293E9E /* Pods-Sepothipi-SepothipiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sepothipi-SepothipiUITests.release.xcconfig"; path = "Target Support Files/Pods-Sepothipi-SepothipiUITests/Pods-Sepothipi-SepothipiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC9FC40C4CBBB7051920B4D0 /* Pods_SepothipiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SepothipiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +252,7 @@
 		98142ED92CB7B6F400122C16 /* Locale */ = {
 			isa = PBXGroup;
 			children = (
+				982267062CB8096D00285B45 /* LocalMusic */,
 				98142EDA2CB7B6FC00122C16 /* Music */,
 			);
 			path = Locale;
@@ -278,6 +283,7 @@
 			children = (
 				982266ED2CB7BDE800285B45 /* PlayableSongEnum.swift */,
 				982267042CB7CA3D00285B45 /* ModuleEnum.swift */,
+				982267092CB8120800285B45 /* ErrorEnum.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -337,6 +343,14 @@
 				982267022CB7CA1500285B45 /* MainBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		982267062CB8096D00285B45 /* LocalMusic */ = {
+			isa = PBXGroup;
+			children = (
+				982267072CB8098700285B45 /* PlayableSongService.swift */,
+			);
+			path = LocalMusic;
 			sourceTree = "<group>";
 		};
 		B076C3272F8C8BB41F825D6F /* Pods */ = {
@@ -609,12 +623,14 @@
 			files = (
 				98142E972CB76E2F00122C16 /* AppDelegate.swift in Sources */,
 				982266FC2CB7C44400285B45 /* MusicService.swift in Sources */,
+				982267082CB8098700285B45 /* PlayableSongService.swift in Sources */,
 				98142E992CB76E2F00122C16 /* SceneDelegate.swift in Sources */,
 				982266EE2CB7BDE800285B45 /* PlayableSongEnum.swift in Sources */,
 				98142ED12CB7783300122C16 /* HomeViewModel.swift in Sources */,
 				982267032CB7CA1500285B45 /* MainBuilder.swift in Sources */,
 				98142ECE2CB7781800122C16 /* HomeViewController.swift in Sources */,
 				982266FA2CB7C43100285B45 /* HomeRepositories.swift in Sources */,
+				9822670A2CB8120800285B45 /* ErrorEnum.swift in Sources */,
 				982266FE2CB7C45A00285B45 /* Music.swift in Sources */,
 				982267002CB7C81B00285B45 /* HomeIteractor.swift in Sources */,
 				982267052CB7CA3D00285B45 /* ModuleEnum.swift in Sources */,

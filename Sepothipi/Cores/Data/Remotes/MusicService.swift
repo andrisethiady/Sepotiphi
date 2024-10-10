@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 protocol MusicListProtocol {
-    func requestMusicList() -> Observable<MusicList>
+    func requestMusicList(keyword: String) -> Observable<MusicList>
 }
 
 class MusicService: NSObject {
@@ -19,11 +19,12 @@ class MusicService: NSObject {
 }
 
 extension MusicService: MusicListProtocol {
-    func requestMusicList() -> Observable<MusicList> {
+    func requestMusicList(keyword: String) -> Observable<MusicList> {
         return Observable.create { observer in
             
+            var processedKeyword = keyword.replacingOccurrences(of: " ", with: "+")
             var urls = "https://itunes.apple.com/search"
-            urls.append("?term=older+sasha+alex&entity=song&limit=20")
+            urls.append("?term=\(processedKeyword)&entity=song&limit=20")
             
             var urlRequest = URLRequest(url: URL(string: urls)!)
             urlRequest.httpMethod = "GET"
@@ -32,7 +33,7 @@ extension MusicService: MusicListProtocol {
                 of: MusicList.self
             ) { response in
                 switch response.result {
-                case .success(var result):
+                case .success(let result):
                     observer.onNext(result)
                     observer.onCompleted()
                 case .failure(let error):

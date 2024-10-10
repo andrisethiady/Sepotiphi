@@ -10,7 +10,8 @@ import RxSwift
 import RxCocoa
 
 protocol HomeUseCase {
-    func requestMusicList() -> Observable<MusicList>
+    func requestMusicList(keyword: String) -> Observable<MusicList>
+    func requestPlayableMusicList() -> Observable<MusicList>
 }
 
 class HomeIteractor: HomeUseCase {
@@ -20,7 +21,11 @@ class HomeIteractor: HomeUseCase {
         self.homeRepository = homeRepository
     }
     
-    func requestMusicList() -> RxSwift.Observable<MusicList> {
-        homeRepository.requestMusicList()
+    func requestMusicList(keyword: String) -> RxSwift.Observable<MusicList> {
+        homeRepository.requestMusicList(keyword: keyword)
+    }
+    
+    func requestPlayableMusicList() -> RxSwift.Observable<MusicList> {
+        homeRepository.requestPlayableMusicList()
     }
 }
