@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		98142E972CB76E2F00122C16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142E962CB76E2F00122C16 /* AppDelegate.swift */; };
 		98142E992CB76E2F00122C16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142E982CB76E2F00122C16 /* SceneDelegate.swift */; };
-		98142E9B2CB76E2F00122C16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142E9A2CB76E2F00122C16 /* ViewController.swift */; };
-		98142E9E2CB76E2F00122C16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 98142E9D2CB76E2F00122C16 /* Base */; };
 		98142EA02CB76E3200122C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98142E9F2CB76E3200122C16 /* Assets.xcassets */; };
 		98142EA32CB76E3200122C16 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 98142EA22CB76E3200122C16 /* Base */; };
 		98142EAE2CB76E3300122C16 /* SepothipiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142EAD2CB76E3300122C16 /* SepothipiTests.swift */; };
 		98142EB82CB76E3300122C16 /* SepothipiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142EB72CB76E3300122C16 /* SepothipiUITests.swift */; };
 		98142EBA2CB76E3300122C16 /* SepothipiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142EB92CB76E3300122C16 /* SepothipiUITestsLaunchTests.swift */; };
+		98142ECD2CB7781800122C16 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98142ECC2CB7781800122C16 /* HomeViewController.xib */; };
+		98142ECE2CB7781800122C16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142ECB2CB7781800122C16 /* HomeViewController.swift */; };
+		98142ED12CB7783300122C16 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142ED02CB7783300122C16 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 		98142E932CB76E2F00122C16 /* Sepothipi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sepothipi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98142E962CB76E2F00122C16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98142E982CB76E2F00122C16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		98142E9A2CB76E2F00122C16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		98142E9D2CB76E2F00122C16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98142E9F2CB76E3200122C16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98142EA22CB76E3200122C16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98142EA42CB76E3200122C16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,9 @@
 		98142EB32CB76E3300122C16 /* SepothipiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SepothipiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98142EB72CB76E3300122C16 /* SepothipiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepothipiUITests.swift; sourceTree = "<group>"; };
 		98142EB92CB76E3300122C16 /* SepothipiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepothipiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		98142ECB2CB7781800122C16 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		98142ECC2CB7781800122C16 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		98142ED02CB7783300122C16 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +101,9 @@
 		98142E952CB76E2F00122C16 /* Sepothipi */ = {
 			isa = PBXGroup;
 			children = (
+				98142EC62CB7769D00122C16 /* Module */,
 				98142E962CB76E2F00122C16 /* AppDelegate.swift */,
 				98142E982CB76E2F00122C16 /* SceneDelegate.swift */,
-				98142E9A2CB76E2F00122C16 /* ViewController.swift */,
-				98142E9C2CB76E2F00122C16 /* Main.storyboard */,
 				98142E9F2CB76E3200122C16 /* Assets.xcassets */,
 				98142EA12CB76E3200122C16 /* LaunchScreen.storyboard */,
 				98142EA42CB76E3200122C16 /* Info.plist */,
@@ -125,6 +126,40 @@
 				98142EB92CB76E3300122C16 /* SepothipiUITestsLaunchTests.swift */,
 			);
 			path = SepothipiUITests;
+			sourceTree = "<group>";
+		};
+		98142EC62CB7769D00122C16 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				98142EC72CB776A500122C16 /* Home */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		98142EC72CB776A500122C16 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				98142EC92CB7770F00122C16 /* Views */,
+				98142ECA2CB7771800122C16 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		98142EC92CB7770F00122C16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98142ECB2CB7781800122C16 /* HomeViewController.swift */,
+				98142ECC2CB7781800122C16 /* HomeViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98142ECA2CB7771800122C16 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				98142ED02CB7783300122C16 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +268,7 @@
 			files = (
 				98142EA02CB76E3200122C16 /* Assets.xcassets in Resources */,
 				98142EA32CB76E3200122C16 /* Base in Resources */,
-				98142E9E2CB76E2F00122C16 /* Base in Resources */,
+				98142ECD2CB7781800122C16 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98142E9B2CB76E2F00122C16 /* ViewController.swift in Sources */,
 				98142E972CB76E2F00122C16 /* AppDelegate.swift in Sources */,
 				98142E992CB76E2F00122C16 /* SceneDelegate.swift in Sources */,
+				98142ED12CB7783300122C16 /* HomeViewModel.swift in Sources */,
+				98142ECE2CB7781800122C16 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		98142E9C2CB76E2F00122C16 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				98142E9D2CB76E2F00122C16 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		98142EA12CB76E3200122C16 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -368,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -425,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -447,9 +475,9 @@
 				INFOPLIST_FILE = Sepothipi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,9 +503,9 @@
 				INFOPLIST_FILE = Sepothipi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
