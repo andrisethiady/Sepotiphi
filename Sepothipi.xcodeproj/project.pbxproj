@@ -21,6 +21,13 @@
 		98142ED12CB7783300122C16 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142ED02CB7783300122C16 /* HomeViewModel.swift */; };
 		98142ED52CB7ABF900122C16 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142ED32CB7ABF900122C16 /* HomeCell.swift */; };
 		98142ED62CB7ABF900122C16 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98142ED42CB7ABF900122C16 /* HomeCell.xib */; };
+		98142EE02CB7B71400122C16 /* EndOfBegining.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98142EDB2CB7B71100122C16 /* EndOfBegining.mp3 */; };
+		98142EE12CB7B71400122C16 /* AboutYou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98142EDC2CB7B71200122C16 /* AboutYou.mp3 */; };
+		98142EE22CB7B71400122C16 /* ForeverYoung.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98142EDD2CB7B71300122C16 /* ForeverYoung.mp3 */; };
+		98142EE32CB7B71400122C16 /* Enchanted.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98142EDE2CB7B71400122C16 /* Enchanted.mp3 */; };
+		98142EE42CB7B71400122C16 /* HidupHarusTetapBerjalan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98142EDF2CB7B71400122C16 /* HidupHarusTetapBerjalan.mp3 */; };
+		98142EE72CB7B79A00122C16 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142EE62CB7B79A00122C16 /* UIView.swift */; };
+		982266EE2CB7BDE800285B45 /* PlayableSongEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982266ED2CB7BDE800285B45 /* PlayableSongEnum.swift */; };
 		CCCB0309AE3979041AF5D3BC /* Pods_Sepothipi_SepothipiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF10A0BD9C778E1DF29FE8 /* Pods_Sepothipi_SepothipiUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +71,13 @@
 		98142ED02CB7783300122C16 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		98142ED32CB7ABF900122C16 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		98142ED42CB7ABF900122C16 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		98142EDB2CB7B71100122C16 /* EndOfBegining.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EndOfBegining.mp3; sourceTree = "<group>"; };
+		98142EDC2CB7B71200122C16 /* AboutYou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AboutYou.mp3; sourceTree = "<group>"; };
+		98142EDD2CB7B71300122C16 /* ForeverYoung.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ForeverYoung.mp3; sourceTree = "<group>"; };
+		98142EDE2CB7B71400122C16 /* Enchanted.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Enchanted.mp3; sourceTree = "<group>"; };
+		98142EDF2CB7B71400122C16 /* HidupHarusTetapBerjalan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HidupHarusTetapBerjalan.mp3; sourceTree = "<group>"; };
+		98142EE62CB7B79A00122C16 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		982266ED2CB7BDE800285B45 /* PlayableSongEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableSongEnum.swift; sourceTree = "<group>"; };
 		986BFC74BFBED497E99F9BB4 /* Pods_Sepothipi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sepothipi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6D4400F72A715627293E9E /* Pods-Sepothipi-SepothipiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sepothipi-SepothipiUITests.release.xcconfig"; path = "Target Support Files/Pods-Sepothipi-SepothipiUITests/Pods-Sepothipi-SepothipiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC9FC40C4CBBB7051920B4D0 /* Pods_SepothipiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SepothipiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +136,7 @@
 		98142E952CB76E2F00122C16 /* Sepothipi */ = {
 			isa = PBXGroup;
 			children = (
+				98142ED72CB7B6E800122C16 /* Cores */,
 				98142EC62CB7769D00122C16 /* Module */,
 				98142E962CB76E2F00122C16 /* AppDelegate.swift */,
 				98142E982CB76E2F00122C16 /* SceneDelegate.swift */,
@@ -191,6 +206,60 @@
 				98142ED42CB7ABF900122C16 /* HomeCell.xib */,
 			);
 			path = HomeViewCell;
+			sourceTree = "<group>";
+		};
+		98142ED72CB7B6E800122C16 /* Cores */ = {
+			isa = PBXGroup;
+			children = (
+				982266EC2CB7BDDA00285B45 /* Enum */,
+				98142EE52CB7B75C00122C16 /* Extensions */,
+				98142ED82CB7B6EE00122C16 /* Data */,
+			);
+			path = Cores;
+			sourceTree = "<group>";
+		};
+		98142ED82CB7B6EE00122C16 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				98142ED92CB7B6F400122C16 /* Locale */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		98142ED92CB7B6F400122C16 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				98142EDA2CB7B6FC00122C16 /* Music */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		98142EDA2CB7B6FC00122C16 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				98142EDC2CB7B71200122C16 /* AboutYou.mp3 */,
+				98142EDE2CB7B71400122C16 /* Enchanted.mp3 */,
+				98142EDB2CB7B71100122C16 /* EndOfBegining.mp3 */,
+				98142EDD2CB7B71300122C16 /* ForeverYoung.mp3 */,
+				98142EDF2CB7B71400122C16 /* HidupHarusTetapBerjalan.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		98142EE52CB7B75C00122C16 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98142EE62CB7B79A00122C16 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		982266EC2CB7BDDA00285B45 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				982266ED2CB7BDE800285B45 /* PlayableSongEnum.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		B076C3272F8C8BB41F825D6F /* Pods */ = {
@@ -325,10 +394,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98142EE12CB7B71400122C16 /* AboutYou.mp3 in Resources */,
+				98142EE02CB7B71400122C16 /* EndOfBegining.mp3 in Resources */,
 				98142EA02CB76E3200122C16 /* Assets.xcassets in Resources */,
 				98142EA32CB76E3200122C16 /* Base in Resources */,
 				98142ED62CB7ABF900122C16 /* HomeCell.xib in Resources */,
+				98142EE32CB7B71400122C16 /* Enchanted.mp3 in Resources */,
+				98142EE22CB7B71400122C16 /* ForeverYoung.mp3 in Resources */,
 				98142ECD2CB7781800122C16 /* HomeViewController.xib in Resources */,
+				98142EE42CB7B71400122C16 /* HidupHarusTetapBerjalan.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,8 +532,10 @@
 			files = (
 				98142E972CB76E2F00122C16 /* AppDelegate.swift in Sources */,
 				98142E992CB76E2F00122C16 /* SceneDelegate.swift in Sources */,
+				982266EE2CB7BDE800285B45 /* PlayableSongEnum.swift in Sources */,
 				98142ED12CB7783300122C16 /* HomeViewModel.swift in Sources */,
 				98142ECE2CB7781800122C16 /* HomeViewController.swift in Sources */,
+				98142EE72CB7B79A00122C16 /* UIView.swift in Sources */,
 				98142ED52CB7ABF900122C16 /* HomeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
