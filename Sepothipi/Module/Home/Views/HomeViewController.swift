@@ -9,21 +9,36 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var tableViewHeader: UIView!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var progressBar: UISlider!
+    @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var btnAllSong: UIButton!
+    @IBOutlet weak var btnPlayableSong: UIButton!
+    
+    @IBOutlet weak var homeTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onPressBtnPrev(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func onPressBtnNext(_ sender: Any) {
+    }
+    
+    @IBAction func onPressBtnPlay(_ sender: Any) {
+    }
+    
+    @IBAction func onPressAllSong(_ sender: Any) {
+    }
+    
+    @IBAction func onPressPlayableSong(_ sender: Any) {
+    }
+    
+    
 }
