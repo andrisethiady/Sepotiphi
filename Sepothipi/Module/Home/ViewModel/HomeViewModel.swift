@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class HomeViewModel: NSObject {
+    var homeUseCase: HomeUseCase
+    
+    init(homeUseCase: HomeUseCase) {
+        self.homeUseCase = homeUseCase
+    }
+    
+}

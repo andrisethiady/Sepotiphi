@@ -28,6 +28,13 @@
 		98142EE42CB7B71400122C16 /* HidupHarusTetapBerjalan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98142EDF2CB7B71400122C16 /* HidupHarusTetapBerjalan.mp3 */; };
 		98142EE72CB7B79A00122C16 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98142EE62CB7B79A00122C16 /* UIView.swift */; };
 		982266EE2CB7BDE800285B45 /* PlayableSongEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982266ED2CB7BDE800285B45 /* PlayableSongEnum.swift */; };
+		982266F42CB7C3E900285B45 /* MainInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982266F32CB7C3E900285B45 /* MainInjection.swift */; };
+		982266FA2CB7C43100285B45 /* HomeRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982266F92CB7C43100285B45 /* HomeRepositories.swift */; };
+		982266FC2CB7C44400285B45 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982266FB2CB7C44400285B45 /* MusicService.swift */; };
+		982266FE2CB7C45A00285B45 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982266FD2CB7C45A00285B45 /* Music.swift */; };
+		982267002CB7C81B00285B45 /* HomeIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982266FF2CB7C81B00285B45 /* HomeIteractor.swift */; };
+		982267032CB7CA1500285B45 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267022CB7CA1500285B45 /* MainBuilder.swift */; };
+		982267052CB7CA3D00285B45 /* ModuleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267042CB7CA3D00285B45 /* ModuleEnum.swift */; };
 		CCCB0309AE3979041AF5D3BC /* Pods_Sepothipi_SepothipiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF10A0BD9C778E1DF29FE8 /* Pods_Sepothipi_SepothipiUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +85,13 @@
 		98142EDF2CB7B71400122C16 /* HidupHarusTetapBerjalan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HidupHarusTetapBerjalan.mp3; sourceTree = "<group>"; };
 		98142EE62CB7B79A00122C16 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		982266ED2CB7BDE800285B45 /* PlayableSongEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableSongEnum.swift; sourceTree = "<group>"; };
+		982266F32CB7C3E900285B45 /* MainInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInjection.swift; sourceTree = "<group>"; };
+		982266F92CB7C43100285B45 /* HomeRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositories.swift; sourceTree = "<group>"; };
+		982266FB2CB7C44400285B45 /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		982266FD2CB7C45A00285B45 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		982266FF2CB7C81B00285B45 /* HomeIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIteractor.swift; sourceTree = "<group>"; };
+		982267022CB7CA1500285B45 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		982267042CB7CA3D00285B45 /* ModuleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleEnum.swift; sourceTree = "<group>"; };
 		986BFC74BFBED497E99F9BB4 /* Pods_Sepothipi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sepothipi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6D4400F72A715627293E9E /* Pods-Sepothipi-SepothipiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sepothipi-SepothipiUITests.release.xcconfig"; path = "Target Support Files/Pods-Sepothipi-SepothipiUITests/Pods-Sepothipi-SepothipiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC9FC40C4CBBB7051920B4D0 /* Pods_SepothipiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SepothipiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +225,9 @@
 		98142ED72CB7B6E800122C16 /* Cores */ = {
 			isa = PBXGroup;
 			children = (
+				982267012CB7CA0600285B45 /* Builder */,
+				982266F22CB7C3D500285B45 /* DI */,
+				982266EF2CB7C2C300285B45 /* Domains */,
 				982266EC2CB7BDDA00285B45 /* Enum */,
 				98142EE52CB7B75C00122C16 /* Extensions */,
 				98142ED82CB7B6EE00122C16 /* Data */,
@@ -221,6 +238,8 @@
 		98142ED82CB7B6EE00122C16 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				982266F62CB7C40B00285B45 /* Repository */,
+				982266F52CB7C40000285B45 /* Remotes */,
 				98142ED92CB7B6F400122C16 /* Locale */,
 			);
 			path = Data;
@@ -258,8 +277,66 @@
 			isa = PBXGroup;
 			children = (
 				982266ED2CB7BDE800285B45 /* PlayableSongEnum.swift */,
+				982267042CB7CA3D00285B45 /* ModuleEnum.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		982266EF2CB7C2C300285B45 /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				982266F12CB7C2D000285B45 /* UseCases */,
+				982266F02CB7C2CA00285B45 /* Entities */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		982266F02CB7C2CA00285B45 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				982266FD2CB7C45A00285B45 /* Music.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		982266F12CB7C2D000285B45 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				982266FF2CB7C81B00285B45 /* HomeIteractor.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		982266F22CB7C3D500285B45 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				982266F32CB7C3E900285B45 /* MainInjection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		982266F52CB7C40000285B45 /* Remotes */ = {
+			isa = PBXGroup;
+			children = (
+				982266FB2CB7C44400285B45 /* MusicService.swift */,
+			);
+			path = Remotes;
+			sourceTree = "<group>";
+		};
+		982266F62CB7C40B00285B45 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				982266F92CB7C43100285B45 /* HomeRepositories.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		982267012CB7CA0600285B45 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				982267022CB7CA1500285B45 /* MainBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		B076C3272F8C8BB41F825D6F /* Pods */ = {
@@ -531,11 +608,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				98142E972CB76E2F00122C16 /* AppDelegate.swift in Sources */,
+				982266FC2CB7C44400285B45 /* MusicService.swift in Sources */,
 				98142E992CB76E2F00122C16 /* SceneDelegate.swift in Sources */,
 				982266EE2CB7BDE800285B45 /* PlayableSongEnum.swift in Sources */,
 				98142ED12CB7783300122C16 /* HomeViewModel.swift in Sources */,
+				982267032CB7CA1500285B45 /* MainBuilder.swift in Sources */,
 				98142ECE2CB7781800122C16 /* HomeViewController.swift in Sources */,
+				982266FA2CB7C43100285B45 /* HomeRepositories.swift in Sources */,
+				982266FE2CB7C45A00285B45 /* Music.swift in Sources */,
+				982267002CB7C81B00285B45 /* HomeIteractor.swift in Sources */,
+				982267052CB7CA3D00285B45 /* ModuleEnum.swift in Sources */,
 				98142EE72CB7B79A00122C16 /* UIView.swift in Sources */,
+				982266F42CB7C3E900285B45 /* MainInjection.swift in Sources */,
 				98142ED52CB7ABF900122C16 /* HomeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,8 @@ import AVFoundation
 
 class HomeViewController: UIViewController {
     
+    var homeViewModel: HomeViewModel! = nil
+    
     var player: AVAudioPlayer!
     var timer: Timer? = nil
 
