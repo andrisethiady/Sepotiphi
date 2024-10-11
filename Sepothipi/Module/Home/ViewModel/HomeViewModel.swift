@@ -20,11 +20,15 @@ class HomeViewModel: NSObject {
     
     let musicList: BehaviorRelay<MusicList> = BehaviorRelay(value: MusicList())
     let error: BehaviorRelay<String> = BehaviorRelay(value: "")
+    let loading: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     
     func getMusicList(keyword: String) {
+        self.loading.accept(true)
         homeUseCase.requestMusicList(keyword: keyword).subscribe(onNext: { [unowned self] response in
+            self.loading.accept(false)
             self.musicList.accept(response)
         },onError: { [unowned self] error in
+            self.loading.accept(false)
             self.error.accept(ErrorEnum.connectionError)
         }).disposed(by: self.bag)
     }

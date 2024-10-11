@@ -37,6 +37,12 @@
 		982267052CB7CA3D00285B45 /* ModuleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267042CB7CA3D00285B45 /* ModuleEnum.swift */; };
 		982267082CB8098700285B45 /* PlayableSongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267072CB8098700285B45 /* PlayableSongService.swift */; };
 		9822670A2CB8120800285B45 /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267092CB8120800285B45 /* ErrorEnum.swift */; };
+		9822670F2CB83D1E00285B45 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822670E2CB83D1E00285B45 /* LoadingView.swift */; };
+		982267112CB8447800285B45 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 982267102CB8447800285B45 /* LoadingView.xib */; };
+		982267132CB852AA00285B45 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267122CB852AA00285B45 /* TableView.swift */; };
+		982267192CB8D0A900285B45 /* PopUpModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982267172CB8D0A900285B45 /* PopUpModalViewController.swift */; };
+		9822671A2CB8D0A900285B45 /* PopUpModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 982267182CB8D0A900285B45 /* PopUpModalViewController.xib */; };
+		9822671C2CB8E0CB00285B45 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822671B2CB8E0CB00285B45 /* UIViewController.swift */; };
 		CCCB0309AE3979041AF5D3BC /* Pods_Sepothipi_SepothipiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF10A0BD9C778E1DF29FE8 /* Pods_Sepothipi_SepothipiUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +102,12 @@
 		982267042CB7CA3D00285B45 /* ModuleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleEnum.swift; sourceTree = "<group>"; };
 		982267072CB8098700285B45 /* PlayableSongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableSongService.swift; sourceTree = "<group>"; };
 		982267092CB8120800285B45 /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
+		9822670E2CB83D1E00285B45 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		982267102CB8447800285B45 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		982267122CB852AA00285B45 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		982267172CB8D0A900285B45 /* PopUpModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpModalViewController.swift; sourceTree = "<group>"; };
+		982267182CB8D0A900285B45 /* PopUpModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpModalViewController.xib; sourceTree = "<group>"; };
+		9822671B2CB8E0CB00285B45 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		986BFC74BFBED497E99F9BB4 /* Pods_Sepothipi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sepothipi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6D4400F72A715627293E9E /* Pods-Sepothipi-SepothipiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sepothipi-SepothipiUITests.release.xcconfig"; path = "Target Support Files/Pods-Sepothipi-SepothipiUITests/Pods-Sepothipi-SepothipiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC9FC40C4CBBB7051920B4D0 /* Pods_SepothipiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SepothipiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +166,7 @@
 		98142E952CB76E2F00122C16 /* Sepothipi */ = {
 			isa = PBXGroup;
 			children = (
+				9822670B2CB83CDF00285B45 /* Commons */,
 				98142ED72CB7B6E800122C16 /* Cores */,
 				98142EC62CB7769D00122C16 /* Module */,
 				98142E962CB76E2F00122C16 /* AppDelegate.swift */,
@@ -274,6 +287,8 @@
 			isa = PBXGroup;
 			children = (
 				98142EE62CB7B79A00122C16 /* UIView.swift */,
+				982267122CB852AA00285B45 /* TableView.swift */,
+				9822671B2CB8E0CB00285B45 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +366,41 @@
 				982267072CB8098700285B45 /* PlayableSongService.swift */,
 			);
 			path = LocalMusic;
+			sourceTree = "<group>";
+		};
+		9822670B2CB83CDF00285B45 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				9822670C2CB83CE700285B45 /* Pages */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		9822670C2CB83CE700285B45 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				982267142CB8CEE800285B45 /* PopUp */,
+				9822670D2CB83CF200285B45 /* Loading */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		9822670D2CB83CF200285B45 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				9822670E2CB83D1E00285B45 /* LoadingView.swift */,
+				982267102CB8447800285B45 /* LoadingView.xib */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		982267142CB8CEE800285B45 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				982267172CB8D0A900285B45 /* PopUpModalViewController.swift */,
+				982267182CB8D0A900285B45 /* PopUpModalViewController.xib */,
+			);
+			path = PopUp;
 			sourceTree = "<group>";
 		};
 		B076C3272F8C8BB41F825D6F /* Pods */ = {
@@ -485,6 +535,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9822671A2CB8D0A900285B45 /* PopUpModalViewController.xib in Resources */,
 				98142EE12CB7B71400122C16 /* AboutYou.mp3 in Resources */,
 				98142EE02CB7B71400122C16 /* EndOfBegining.mp3 in Resources */,
 				98142EA02CB76E3200122C16 /* Assets.xcassets in Resources */,
@@ -494,6 +545,7 @@
 				98142EE22CB7B71400122C16 /* ForeverYoung.mp3 in Resources */,
 				98142ECD2CB7781800122C16 /* HomeViewController.xib in Resources */,
 				98142EE42CB7B71400122C16 /* HidupHarusTetapBerjalan.mp3 in Resources */,
+				982267112CB8447800285B45 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,10 +673,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982267192CB8D0A900285B45 /* PopUpModalViewController.swift in Sources */,
 				98142E972CB76E2F00122C16 /* AppDelegate.swift in Sources */,
 				982266FC2CB7C44400285B45 /* MusicService.swift in Sources */,
 				982267082CB8098700285B45 /* PlayableSongService.swift in Sources */,
 				98142E992CB76E2F00122C16 /* SceneDelegate.swift in Sources */,
+				9822670F2CB83D1E00285B45 /* LoadingView.swift in Sources */,
 				982266EE2CB7BDE800285B45 /* PlayableSongEnum.swift in Sources */,
 				98142ED12CB7783300122C16 /* HomeViewModel.swift in Sources */,
 				982267032CB7CA1500285B45 /* MainBuilder.swift in Sources */,
@@ -633,6 +687,8 @@
 				9822670A2CB8120800285B45 /* ErrorEnum.swift in Sources */,
 				982266FE2CB7C45A00285B45 /* Music.swift in Sources */,
 				982267002CB7C81B00285B45 /* HomeIteractor.swift in Sources */,
+				9822671C2CB8E0CB00285B45 /* UIViewController.swift in Sources */,
+				982267132CB852AA00285B45 /* TableView.swift in Sources */,
 				982267052CB7CA3D00285B45 /* ModuleEnum.swift in Sources */,
 				98142EE72CB7B79A00122C16 /* UIView.swift in Sources */,
 				982266F42CB7C3E900285B45 /* MainInjection.swift in Sources */,
